@@ -12,20 +12,20 @@ body {
     text-align: center;
     font-family: sans-serif;
     margin: 0;
-    padding: 10px;
+    padding: 0px;
     box-sizing: border-box;
 }
 
 h1 {
     font-size: 1.8rem;
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 input {
-    font-size: 24px;
+    font-size: 20px;
     width: 90%;      
     max-width: 400px; /* 🎯 บังคับช่องกรอกในคอมไม่ให้ยาวเกินไป */
-    padding: 12px;
+    padding: 6px;
     text-align: center;
     border-radius: 8px;
     border: none;
@@ -33,18 +33,18 @@ input {
 }
 
 #result {
-    margin-top: 30px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .row {
-    font-size: 5vw;        /* ขนาดออโต้สำหรับมือถือ */
-    margin: 4px 0;         
-    letter-spacing: 0.3em; 
+    font-size: 6vw;       /* 📉 ลดขนาดตัวอักษรลงอีกจิ๊ดนึงเพื่อความชัวร์ไม่ให้หลุดขอบจอ */
+    margin: 1px 0;          /* ↕️ บีบระยะห่างระหว่างบรรทัด (แนวตั้ง) ให้แคบสุดๆ พีระมิดจะดูกระชับขึ้นมาก */
+    letter-spacing: 0.15em; /* ↔️ ลดสเปซแนวนอนลงครึ่งนึง (จาก 0.3em เหลือ 0.15em) ตัวเลขจะขยับมาชิดกันสวยงาม */
     white-space: nowrap;   
-    padding-left: 0.3em;   
+    padding-left: 0.15em;   /* 🎯 ปรับสมดุลฝั่งซ้ายให้เท่ากับระยะห่างตัวอักษรเพื่อให้อยู่ตรงกลางเป๊ะ */
 }
 
 /* 💻 โค้ดสำหรับหน้าจอคอมพิวเตอร์ (หน้าจอที่กว้างกว่า 600px ขึ้นไป) */
