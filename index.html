@@ -8,50 +8,63 @@
 <style>
 body {
     background: #000;
-    color: white;
-    text-align: center;
-    font-family: sans-serif;
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* 🎯 ใช้ฟอนต์โมเดิร์นแบบระบบมือถือ */
     margin: 0;
-    padding: 0px;
+    padding: 24px 20px; /* ระยะห่างรอบตัวเว็บให้ดูสบายตา */
     box-sizing: border-box;
 }
 
 h1 {
-    font-size: 1.8rem;
-    margin-top: 0px;
+    font-size: 1.5rem; /* ขนาดหัวข้อกำลังดี ไม่ใหญ่จนเกินไป */
+    font-weight: 600;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 8px; /* เว้นช่องไฟให้ติดกับช่องกรอก */
+    color: #ffffff;
 }
 
 input {
-    font-size: 20px;
-    width: 90%;      
-    max-width: 400px; /* 🎯 บังคับช่องกรอกในคอมไม่ให้ยาวเกินไป */
-    padding: 6px;
-    text-align: center;
-    border-radius: 8px;
-    border: none;
+    font-size: 26px; /* ตัวเลขตอนพิมพ์ดูคมชัด */
+    width: 100%;      
+    max-width: 500px; 
+    padding: 14px 16px;
+    text-align: left;  
+    background-color: #1c1c1e; /* 🖤 เปลี่ยนช่องกรอกเป็นสีเทาเข้ม (Dark Mode สไตล์ Apple) */
+    color: #ffffff;
+    border-radius: 10px;       /* ขอบมนโค้งมนสวยงาม */
+    border: 1px solid #2c2c2e; /* เส้นขอบบางๆ เพิ่มมิติ */
     box-sizing: border-box;
+    display: block;    
+    margin-bottom: 35px;       /* ทิ้งระยะห่างอย่างเหมาะสมก่อนเริ่มพีระมิด */
+    outline: none;
+}
+
+input::placeholder {
+    color: #8e8e93; /* สีของข้อความแนะนําตอนยังไม่กรอกให้ดูซอฟต์ลง */
 }
 
 #result {
-    margin-top: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* จัดให้พีระมิดเรียงเป็นทรงสามเหลี่ยมอยู่ตรงกลางเสมอ */
 }
 
 .row {
-    font-size: 6vw;       /* 📉 ลดขนาดตัวอักษรลงอีกจิ๊ดนึงเพื่อความชัวร์ไม่ให้หลุดขอบจอ */
-    margin: 1px 0;          /* ↕️ บีบระยะห่างระหว่างบรรทัด (แนวตั้ง) ให้แคบสุดๆ พีระมิดจะดูกระชับขึ้นมาก */
-    letter-spacing: 0.15em; /* ↔️ ลดสเปซแนวนอนลงครึ่งนึง (จาก 0.3em เหลือ 0.15em) ตัวเลขจะขยับมาชิดกันสวยงาม */
+    font-size: 4.6vw;        /* ขนาดตัวเลขปรับอัตโนมัติตามหน้าจอมือถือ */
+    font-weight: 400;
+    color: #f2f2f7;          /* สีขาวนวล สบายตา */
+    margin: 2px 0;           /* ระยะห่างแต่ละชั้นของพีระมิด */
+    letter-spacing: 0.18em;  /* ระยะห่างระหว่างตัวเลขที่พอดี ไม่ชิดและไม่ห่างเกินไป */
     white-space: nowrap;   
-    padding-left: 0.15em;   /* 🎯 ปรับสมดุลฝั่งซ้ายให้เท่ากับระยะห่างตัวอักษรเพื่อให้อยู่ตรงกลางเป๊ะ */
+    padding-left: 0.18em;    
 }
 
-/* 💻 โค้ดสำหรับหน้าจอคอมพิวเตอร์ (หน้าจอที่กว้างกว่า 600px ขึ้นไป) */
+/* 💻 ปรับแต่งสำหรับหน้าจอคอมพิวเตอร์ */
 @media (min-width: 600px) {
     .row {
-        font-size: 32px; /* 🎯 บังคับให้ขนาดตัวเลขในคอมหยุดใหญ่ขึ้น ล็อกไว้ที่ 32px พอดีสายตา */
-        margin: 8px 0;   /* เพิ่มระยะห่างแนวตั้งในคอมเล็กน้อยให้ดูสบายตา */
+        font-size: 28px;    /* ขนาดตัวเลขบนคอมพิวเตอร์ไม่ให้ใหญ่ล้น */
+        margin: 6px 0;   
     }
 }
 </style>
