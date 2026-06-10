@@ -17,13 +17,14 @@ body {
 }
 
 h1 {
-    font-size: 1.8rem; /* ปรับขนาดหัวข้อให้พอดีกับมือถือ */
+    font-size: 1.8rem;
     margin-top: 20px;
 }
 
 input {
-    font-size: 24px; /* ลดขนาดตัวอักษรในช่องกรอกลงหน่อย */
-    width: 90%;      /* ให้ขยายกว้างเกือบเต็มจอมือถือ */
+    font-size: 24px;
+    width: 90%;      
+    max-width: 400px; /* 🎯 บังคับช่องกรอกในคอมไม่ให้ยาวเกินไป */
     padding: 12px;
     text-align: center;
     border-radius: 8px;
@@ -39,12 +40,22 @@ input {
 }
 
 .row {
-    font-size: 6vw; /* 💡 ใช้หน่วย vw (Viewport Width) ตัวอักษรจะย่อ-ขยายออโต้ตามความกว้างของหน้าจอ */
-    margin: 8px 0;
-    letter-spacing: 0.5em; /* ใช้หน่วย em ช่วยให้ระยะห่างระหว่างตัวเลขสมดุลขึ้น */
-    white-space: nowrap;   /* บังคับไม่ให้ตัวเลขในแถวเดียวกันหักตกแถวลงมา */
+    font-size: 5vw;        /* ขนาดออโต้สำหรับมือถือ */
+    margin: 4px 0;         
+    letter-spacing: 0.3em; 
+    white-space: nowrap;   
+    padding-left: 0.3em;   
+}
+
+/* 💻 โค้ดสำหรับหน้าจอคอมพิวเตอร์ (หน้าจอที่กว้างกว่า 600px ขึ้นไป) */
+@media (min-width: 600px) {
+    .row {
+        font-size: 32px; /* 🎯 บังคับให้ขนาดตัวเลขในคอมหยุดใหญ่ขึ้น ล็อกไว้ที่ 32px พอดีสายตา */
+        margin: 8px 0;   /* เพิ่มระยะห่างแนวตั้งในคอมเล็กน้อยให้ดูสบายตา */
+    }
 }
 </style>
+
 </head>
 <body>
 
